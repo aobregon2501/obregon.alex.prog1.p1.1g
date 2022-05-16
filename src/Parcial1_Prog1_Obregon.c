@@ -7,7 +7,7 @@
 float aplicarDescuento(float p);
 
 //ej2
-int contarCaracteres(char cadena[], char caracter);
+int contarCaracteres(char cadena[], char caracter, int tam);
 #define TAM 5
 
 //ej3
@@ -31,7 +31,7 @@ int main(void) {
 	float precioConDescuento;
 
 	precioConDescuento = aplicarDescuento(precio);
-	printf("%f", precioConDescuento);
+	printf("%f\n", precioConDescuento);
 
 
 	//ej2
@@ -64,7 +64,7 @@ int contarCaracteres(char cadena[], char caracter, int tam)
 {
 	int cont = 0;
 
-	for(i = 0; i < tam; i++)
+	for(int i = 0; i < tam; i++)
 	{
 		if(cadena[i] == caracter)
 		{
