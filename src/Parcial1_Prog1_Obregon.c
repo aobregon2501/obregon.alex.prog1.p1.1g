@@ -6,8 +6,23 @@
 //ej1
 float aplicarDescuento(float p);
 
+//ej2
 int contarCaracteres(char cadena[], char caracter);
 #define TAM 5
+
+//ej3
+typedef struct
+{
+    int id;
+    char procesador[20];
+    char marca[20];
+    float precio;
+} eNotebook;
+
+#define TAM_LISTA 5
+
+int ordenarLista(eNotebook vec[], int tam);
+
 
 int main(void) {
 
@@ -16,13 +31,21 @@ int main(void) {
 	float precioConDescuento;
 
 	precioConDescuento = aplicarDescuento(precio);
+	printf("%f", precioConDescuento);
 
 
 	//ej2
 	char palabra[TAM] = {'a','b','a','f','a'};
 	char letra = 'a';
+	int cantidadLetras;
 
-	contarCaracteres(palabra, letra, TAM);
+	cantidadLetras = contarCaracteres(palabra, letra, TAM);
+	printf("%d", cantidadLetras);
+
+
+	//ej3
+
+	eNotebook lista[TAM_LISTA];
 
 
 	return EXIT_SUCCESS;
@@ -53,3 +76,7 @@ int contarCaracteres(char cadena[], char caracter, int tam)
 }
 
 
+int ordenarLista(eNotebook vec[], int tam)
+{
+
+}
